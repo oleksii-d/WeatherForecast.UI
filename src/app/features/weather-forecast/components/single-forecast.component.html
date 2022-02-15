@@ -1,0 +1,13 @@
+<div *ngIf="singleForecast" class="card border-dark m-3 single-forecast-div">
+    <h5 class="card-header">
+      {{singleForecast.date | date:'longDate'}}
+    </h5>
+    <div class="card-body">
+      <h6 class="card-title">Temperature:</h6>  
+      <p class="card-text">From {{singleForecast.minTemperature}} to {{singleForecast.maxTemperature}}.</p>
+      <h6 class="card-title">Day:</h6>  
+      <p class="card-text">{{singleForecast.dayDescription}}. {{singleForecast.dayPrecipitation || 'No precipitation'}}.</p>
+      <h6 class="card-title">Night:</h6>  
+      <p class="card-text">{{singleForecast.nightDescription}}. {{singleForecast.nightPrecipitation || 'No precipitation'}}.</p>
+    </div>
+  </div>

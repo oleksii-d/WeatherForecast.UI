@@ -1,0 +1,11 @@
+<app-layout style="min-height: 100%;">
+    <div *ngIf="weatherForecast">
+        <h4 class="m-3 forecast-title">Weather forecast in {{weatherForecast.locationName}}</h4>
+        <div class="card-group">
+            <app-single-forecast
+                *ngFor="let singleForecast of weatherForecast.forecasts" 
+                [singleForecast]="singleForecast">
+            </app-single-forecast>
+        </div>
+    </div>
+</app-layout>
